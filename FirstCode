@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<!--
+    tagsV1.html - used to test to tagging function in html
+    Arianna Oros
+    email: arioros@uat.edu
+-->
+
+<head>
+    <title>
+        UAT Space Invaders
+    </title>
+</head>
+
+<body>
+    <h2 id= "Welcome"> Welcome Space Invaders!</h2>
+    <p> This page will provide information on the program. </p>
+    <br>
+    <button id="btnAlert" onclick="alert('This is an alert');"> CLICK ME! </button>
+</body>
+</html>
