@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <!--
+    tagsV1.html - used to test to tagging function in html
+    Arianna Oros
+    email: arioros@uat.edu
+-->
+    <head>
+        <script src="craps.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>
+            UAT's Space Invaders
+        </title>
+    </head>
+
+    <body>
+        <img src="UATspaceLogo.jpg">
+        <h1> UAT Space Program </h1>
+        <p> This page will provide information on the program. </p>
+        <script>
+            document.write("Testing...");
+        </script>
+        <br>
+        <br>
+        <div id="blastOffText"> Starting Countdown... </div>
+        <br>
+        <br>
+        <h2 id="blink"> Let's Play Craps </h2>
+        <br>
+        <button onclick="startsCraps();" class="button" >Play</button>
+        <br>
+        <br>
+        <div id="crapsRes"> Craps Results</div>
+        <div id="die1Res"> die1 Results</div>
+        <div id="die2Res"> die2 Results</div>
+        <div id="sumRes">sum Results</div>
+        <br>
+        <br>
+        <script type="text/javascript"> 
+            var blink = document.getElementById('blink');
+            setInterval(function(){
+                blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+            }, 500);
+        </script>
+        Wins: <div id="winRes">0</div>
+        Losses: <div id="lossRes">0</div>
+        Ties: <div id="tieRes">0</div>    
+    </body>
+</html>
