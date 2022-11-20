@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<!--
+    tagsV1.html - used to test to tagging function in html
+    Arianna Oros
+    email: arioros@uat.edu
+-->
+
+<head>
+    <title>
+        UAT Space Invaders
+    </title>
+    <script src="craps.js"></script>
+    <script src="classCode.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <table>
+        <td>
+            <img src="UATspaceLogo.jpg">
+            
+        </td>
+        <td>
+            <h1> UAT Space Program </h1>
+        </td>
+    </table>
+    <br>
+    <table id="data" border="2" width="70%">
+        <col style="width:35%;">
+        <col style="width:35%;">
+        <thead>
+            <tr id="tableHead">
+                <th> Data Type </th> 
+                <th> Reading </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr id="seconds" class="try1">
+                <td>Time Elasped:</td>
+                <td>15 Seconds</td>
+            </tr>
+            <tr id="latitude" class="try2">
+                <td>Latitude:</td>
+                <td>0</td>
+            </tr>
+            <tr id="longitude">
+                <td>Longitude:</td>
+                <td>0</td>
+            </tr>
+            <tr id="gpsSensor_alt">
+                <td>GPS Altitude:</td>
+                <td>0</td>
+            </tr>
+            <tr id="bmpSensor_alt">
+                <td>BMP Sensor Altitude:</td>
+                <td>30383.04</td>
+            </tr>
+            <tr id="bmpSensor_pres">
+                <td>BMP Sensor Pressure:</td><td>2.34</td>
+            </tr>
+            <tr id="bmpSensor_temp">
+                <td>BMP Sensor Temperature:</td>
+                <td>0</td>
+            </tr>
+            <tr id="digitalSensor_temp">
+                <td>Digital Sensor Temperature:</td>
+                <td>24.12</td>
+            </tr>
+            <tr id="cssSensor_temp">
+                <td>CSS Sensor Temperature:</td>
+                <td>25</td>
+            </tr>
+            <tr id="cssSensor_eCO2">
+                <td>CSS Sensor eCO2:</td>
+                <td>400</td>
+            </tr>
+            <tr id="cssSensor_TVOC">
+                <td>CSS Sensor TVOC:</td>
+                <td>0</td>
+            </tr>
+            <tr id="UV">
+                <td>UV:</td>
+                <td>0</td>
+            </tr>
+            <tr id="accelX">
+                <td>Accel X:</td>
+                <td>-0.87</td>
+            </tr>
+            <tr id="accelY">
+                <td>Accel Y:</td>
+                <td>-0.02</td>
+            </tr>
+            <tr id="accelZ">
+                <td>Accel Z:</td>
+                <td>9.61</td>
+            </tr>
+            <tr id="magneticX">
+                <td>Magnetic X:</td>
+                <td>0.13</td>
+            </tr>
+            <tr id="magneticY">
+                <td>Magnetic Y:</td>
+                <td>0.57</td>
+            </tr>
+            <tr id="magneticZ">
+                <td>Magnetic Z:</td>
+                <td>-0.24</td>
+            </tr>
+            <tr id="gyroX">
+                <td>Gyro X:</td>
+                <td>4.66</td>
+            </tr>
+            <tr id="gyroY">
+                <td>Gyro Y:</td>
+                <td>0.01</td>
+            </tr>
+            <tr id="gyroZ">
+                <td>Gyro Z:</td>
+                <td>-0.4</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h2 id= "Welcome"> Welcome Space Invaders!</h2>
+    <p> This page will provide information on the program. </p>
+    <br>
+    <button id="startButton" onclick="start();" class="button"> Start </button>
+    <button id="stopButton" onclick="stop();" class="button"> Stop </button>
+    <br>
+
+    <!--
+        Both blast off and craps works go ahead and try it out I made sure they both didn't interfere with each other
+    -->   
+    <br>
+    <button onclick="btrCountDownV1()" class="button"> Lift Off! </button>
+    <div id="countDownRes"></div>
+    <br>
+    
+    <br>
+    <h2 id="blink"> Let's Play Craps </h2>
+    <br>
+    <button onclick="startsCraps();" class="button" >Play</button>
+    <br>
+    <br>
+    <div id="crapsRes"> Craps Results</div>
+    <div id="die1Res"> die1 Results</div>
+    <div id="die2Res"> die2 Results</div>
+    <div id="sumRes">sum Results</div>
+    <br>
+    <br>
+    <script type="text/javascript"> 
+        var blink = document.getElementById('blink');
+        setInterval(function(){
+            blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+        }, 500);
+    </script>
+    Wins: <div id="winRes">0</div>
+    Losses: <div id="lossRes">0</div>
+    Ties: <div id="tieRes">0</div>    <!--- a little curious on what else I can add to make all functions working-->
+    <br>
+    <br>
+    <button class="lgbButton" onclick="playStation();"> Play Space Station Sounds </button>
+    <br>
+    <br>
+    <script>
+        var springLaunch = new Mission("To boldly go...", 17, 17, "March", 2022, "Fiona", 3);
+        var fallLaunch = new Mission("To go twice", 25, 13, "November", 2023, "Polaris", 2);
+    </script>
+    <br>
+    <br>
+    <button class="button" onclick="launchFall()"> Launch Fall </button>
+    <button class="button" onclick="displayFall()"> displayFall </button>
+    <br>
+    <br>
+    <button class="button" onclick="launchSpring()"> Launch Spring </button>
+    <button class="button" onclick="displaySpring()"> displaySpring </button>
+
+</body>
+
+</html>
