@@ -1,0 +1,11 @@
+body{
+    background-color: gray;
+    font-family: 'Sofia', sans-serif;
+}
+.button{
+    background-color: white;
+    border-color:red;
+    width: 100px;
+    height: 30px;
+    border-radius: 12px;
+}
